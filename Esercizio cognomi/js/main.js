@@ -11,6 +11,8 @@ Lista task:
 
 var richiesta = prompt("Inserisci il tuo cognome");
 
+var trovato = -1;
+
 var listaCognomi = [
     "Condello",
     "Mosca",
@@ -37,8 +39,12 @@ for(var posizione=0; posizione < listaCognomi.length; posizione++) {
     console.log(posizione, '=>', cognome); //Questa è la posizione
     if(cognome == richiesta) {
         console.log("posizione richiesta", posizione);
+        trovato = posizione;
     }
 }
 
 //scrivi la posizione con un alert fuori dal for
 
+console.log(trovato);
+
+alert("La tua posizione nella lista è " + trovato);
